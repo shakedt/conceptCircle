@@ -9,7 +9,7 @@ Once done, please send back the new and improved version.
 
 What to do:
 1) Make the piece "hollow" when the mouse hovers over it (hollow means only the border should be drawn with the color of the piece) - done
-2) The `init` function has too much code duplication - fix it  - dpne
+2) The `init` function has too much code duplication - fix it  - done
 3) Add a 'Reset' button that returns the piece back to its initial location - done
 4) Add a 'Randomize' button that places the piece at a random location -done
 5) Make sure that the piece never gets off the screen - done
@@ -28,9 +28,12 @@ What to do:
 8) How would you improve the code of this project?   
 Meaning, how would you implement the same application differently (if at all) - did you have parts of the code that you didn't like? would you add anything? Use a different architecture? 
 
-** I will start by moving the project to a react envoirment and splitting to reusabel components.
+** The project is a bit too 'single minded' i can't just pass a  class to someone to and it will work out of the box.
+** I might have made it more easy to reuse, becouse for example if i have 2 elements i will have to duplicate a lot of code.
+** Or if i want to set a different area and not the entire screen for the random button to work i will have to rewrite the code.
 ** adding tests
 ** splitting to mutiply files
+** Becouse of my use of transition in the animation,there  is a need to add deffered or disabling the button until the movement animation is done.
 
 Give some suggestions!
 
