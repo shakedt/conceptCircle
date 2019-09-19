@@ -20,7 +20,9 @@ body {
   height: 100px;
   border-radius: 50px;
   background: blue;
+  transition: top .2s, left .2s;
 }
+
 #piece {
   position: absolute;
   top: 100px;
