@@ -1,7 +1,3 @@
-// Becouse of the request that  the color of "hallowed" circledd will be the same as the current circle color we need a shared variable.
-// Currently to avoid over complicating or moving the code to a class i chose to use a 'global' variable.
-let oldColor = 'blue';
-
 // piece object
 const piece = (function() {
   let el = null;
@@ -114,6 +110,5 @@ const getAndSetCircleColor = () => {
     }
 
     circle.classList.add(colorToSet);
-    oldColor = colorToSet;
   });
 };
