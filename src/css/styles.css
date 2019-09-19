@@ -21,6 +21,11 @@ body {
   border-radius: 50px;
   background: blue;
   transition: top .2s, left .2s;
+  border-color: blue;
+}
+
+.circle:hover {
+  background: unset;
 }
 
 #piece {

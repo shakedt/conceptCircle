@@ -93,9 +93,12 @@ const handleRandomButtonSetUp = () => {
 };
 
 const randomizeLocation = () => {
+  const circleHeight = 100;
+  const circleWidth = 100;
+
   // Not all browsers support window.innerWidth/height, i  add also fall back on document.
-  const screenHeight = (window.innerHeight || document.documentElement.clientHeight);
-  const screenWidth = (window.innerWidth || document.documentElement.clientHeight);
+  const screenHeight = (window.innerHeight || document.documentElement.clientHeight) - circleHeight;
+  const screenWidth = (window.innerWidth || document.documentElement.clientHeight) - circleWidth;
 
   // calculate height and width randomly from 1 to screen height/ screen width.
   const height = (Math.random() * screenHeight) + 1;
