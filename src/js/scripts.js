@@ -1,4 +1,4 @@
-// Becouse of the request that  the color of "hallowed" circle will be the same as the current circle color we need a shared variable.
+// Becouse of the request that  the color of "hallowed" circledd will be the same as the current circle color we need a shared variable.
 // Currently to avoid over complicating or moving the code to a class i chose to use a 'global' variable.
 let oldColor = 'blue';
 
@@ -23,39 +23,17 @@ function handleClick(ev) {
   piece.moveDelta(parseInt(this.dataset.dx), parseInt(this.dataset.dy));
 }
 
-const handleMouseOver = () => {
-  var circle = document.getElementById('piece'); 
-  oldColor = circle.style.backgroundColor;
-
-  circle.style.border = '1px solid';
-  circle.style.borderColor = oldColor;
-  circle.style.backgroundColor = 'white';
-}
-
-const handleMouseLeave = () => {
-  var circle = document.getElementById('piece'); 
-  circle.style.border = '0px';
-  circle.style.backgroundColor = oldColor; 
-}
-
 function init() {
   handleButtonListenerSetUp();
   handleResetButtonSetup();
   handleRandomButtonSetUp();
   getAndSetCircleColor();
-  handleCircleMouseOverActions();
 }
 
 window.addEventListener("DOMContentLoaded", event => {
   piece.init(document.getElementById("piece"));
   init();
 });
-
-const handleCircleMouseOverActions = () => {
-  var circle = document.getElementById('piece');
-  circle.onmouseover = handleMouseOver;
-  circle.onmouseleave = handleMouseLeave;
-};
 
 const handleResetButtonSetup = () => {
   const resetButton = document.getElementById('reset');
@@ -115,6 +93,7 @@ const randomizeLocation = () => {
 
 // Get and set circle color  from the api
 const getAndSetCircleColor = () => {
+  
   fetch('http://api.apixu.com/v1/current.json?key=dda6e762ae4f41efb7e173552192204&q=tel%20avi')
   .then(function(response) {
     return response.json();
@@ -134,7 +113,7 @@ const getAndSetCircleColor = () => {
       colorToSet = 'red';
     }
 
-    circle.style.backgroundColor = colorToSet;
+    circle.classList.add(colorToSet);
     oldColor = colorToSet;
   });
 };

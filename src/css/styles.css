@@ -19,13 +19,35 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  background: blue;
   transition: top .2s, left .2s;
-  border-color: blue;
+  
 }
 
+.circle.blue {
+  background: blue;
+  border-color: blue;
+  border: 1px solid blue;
+}
+
+.circle.yellow  {
+  background-color: yellow;
+  border-color:yellow;
+  border: 1px solid yellow;
+}
+
+.circle.red { 
+  background: red;
+  border-color: red;
+  border: 1px solid red;
+}
+
+.circle.green {
+  background: green;
+  border-color: green;
+  border: 1px solid green;
+}
 .circle:hover {
-  background: unset;
+  background-color: unset;
 }
 
 #piece {
